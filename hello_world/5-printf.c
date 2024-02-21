@@ -2,7 +2,7 @@
 /**
  * main - prints a text
  * description: print the text
- * return: zero
+ * Return: zero
  */
 int main(void)
 {
