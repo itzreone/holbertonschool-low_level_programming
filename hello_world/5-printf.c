@@ -1,6 +1,7 @@
 #include<stdio.h>
-/*
+/**
  * main - prints a text
+ * description: print the text
  * return: zero
  */
 int main(void)
