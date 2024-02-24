@@ -9,13 +9,23 @@
  */
 int main(void)
 {
-	int c;
-
-	for (c = 0 ; c < 16 ; c++)
-	{
-		printf("%x", c);
-	}
-	printf("\n");
-
-	return (0);
+        char c;
+        c = 0;
+        while(c <= 10)
+        if(c < 10)
+        {
+            putchar(c);
+            c++;
+        }
+        else if(c = 10)
+        {
+                c = 'a';
+                while(c <= 'f')
+                {
+                        putchar(c);
+                        c++;
+                }
+        }
+        
+        return (0);
 }
