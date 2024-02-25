@@ -28,5 +28,20 @@ void jack_bauer(void)
 				}
 			}
 		else if (n1 == '2')
-			for 
-
+			for (n2 = '0', n <=3, n2++)
+			{
+				for (n3 = '0', n3 <= '5', n3++)
+				{
+					for (n4 = '0', n4 <= '9', n4++)
+					{
+					_putchar(c1);
+					_putchar(c2);
+					_putchar(':');
+					_putchar(c3);
+					_putchar(c4);
+					_putchar('\n');
+					}
+				}
+			}
+	}
+}
