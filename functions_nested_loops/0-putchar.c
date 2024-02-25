@@ -1,14 +1,22 @@
-#include <stdlib.h>
+#include "main.h"
 #include <stdio.h>
-/* betty style doc for function main goes there */
+
 /**
- * main - Entry point
+ * main - check the code
  *
- * Description: 'get number'
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
+
 int main(void)
 {
-	printf("_putchar");
-}
+	char c[] = "_putchar";
+	int i;
 
+	for (i = 0 ; i < 8 ; i++)
+	{
+		_putchar(c[i]);
+	}
+	_putchar('\n');
+
+	return (0);
+}
