@@ -9,6 +9,7 @@
  */
 int _abs(int r)
 {
+	int a;
 	if (r < 0)
 	{
 		a = r * -1;
