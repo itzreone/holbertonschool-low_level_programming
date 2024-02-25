@@ -7,47 +7,24 @@
  */
 void jack_bauer(void)
 {
-	char n1, n2, n3, n4;
+	char c1, c2, c3, c4;
 
-	for (n1 = '0'; n1 <= '2'; n1++)
+	for (c1 = '0' ; c1 <= '2' ; c1++)
 	{
-		if (n1 == '0' || n1 == '1')
+		for (c2 = '0' ; c1 != '2' ? c2 <= '9' : c2 <= '3' ; c2++)
 		{
-			for (n2 = '0'; n2 <=9; n2++)
+			for (c3 = '0' ; c3 <= '5' ; c3++)
 			{
-				for (n3 = '0'; n3 <= '5'; n3++)
+				for (c4 = '0' ; c4 <= '9' ; c4++)
 				{
-					for (n4 = '0'; n4 <= '9'; n4++)
-					{
-						_putchar(n1);
-						_putchar(n2);
-						_putchar(':');
-						_putchar(n3);
-						_putchar(n4);
-						_putchar('\n');
-					}
+					_putchar(c1);
+					_putchar(c2);
+					_putchar(':');
+					_putchar(c3);
+					_putchar(c4);
+					_putchar('\n');
 				}
-			}
-		}
-		else if (n1 == '2')
-		{
-			for (n2 = '0'; n2 <=3; n2++)
-			{
-				for (n3 = '0'; n3 <= '5'; n3++)
-				{
-					for (n4 = '0'; n4 <= '9'; n4++)
-					{
-						_putchar(n1);
-						_putchar(n2);
-						_putchar(':');
-						_putchar(n3);
-						_putchar(n4);
-						_putchar('\n');
-					}
-				}
-		
 			}
 		}
 	}
-
 }
