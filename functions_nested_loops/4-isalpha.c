@@ -3,7 +3,8 @@
 
 /**
  * main - check the code.
- *
+ * * _isalpha - checks for alphabetic character
+ * @c: the number is checker
  * Return: Always 0.
  */
 int _isalpha(int c)
