@@ -12,6 +12,7 @@ void jack_bauer(void)
 	for (n1 = '0'; n1 <= '2'; n1++)
 	{
 		if (n1 == '0' || n1 == '1')
+		{
 			for (n2 = '0'; n2 <=9; n2++)
 			{
 				for (n3 = '0'; n3 <= '5'; n3++)
@@ -27,7 +28,9 @@ void jack_bauer(void)
 					}
 				}
 			}
+		}
 		else if (n1 == '2')
+		{
 			for (n2 = '0'; n2 <=3; n2++);
 			{
 				for (n3 = '0'; n3 <= '5'; n3++);
@@ -42,6 +45,9 @@ void jack_bauer(void)
 						_putchar('\n');
 					}
 				}
+		
 			}
+		}
 	}
+
 }
