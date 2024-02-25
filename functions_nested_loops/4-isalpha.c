@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
- * main - check the code.
- * 
  * _isalpha - checks for alphabetic character
  * @c: the number is checker
- * Return: Always 0.
+ *
+ * Return: Always 0 (Success)
  */
 int _isalpha(int c)
 {
