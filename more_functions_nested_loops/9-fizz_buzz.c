@@ -9,18 +9,19 @@
 int main(void)
 {
 	int i, j, l;
-	for (l = 1; l <= 100; l++)
+	for (l = 1; l < 100; l++)
 	{
 		i = l % 3;
-		j = l % 5;	
+		j = l % 5;
 		if (i == 0 && j == 0)
 			printf("FizzBuzz ");
 		else if(i == 0 && j != 0)
 			printf("Fizz ");
 		else if(i != 0 && j == 0)
-			i != 100 ? printf("Buzz ") : printf("Buzz");
+			printf("Buzz ")
 		else
 			printf("%d ", l);
 	}
+	printf("Buzz");
     return (0);
 }
