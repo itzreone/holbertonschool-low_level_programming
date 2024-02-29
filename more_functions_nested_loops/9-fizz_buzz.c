@@ -21,7 +21,6 @@ int main(void)
 			i != 100 ? printf("Buzz ") : printf("Buzz");
 		else
 			printf("%d ", l);
-		if( l != 100)
 	}
     return (0);
 }
