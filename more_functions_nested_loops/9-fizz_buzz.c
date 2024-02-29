@@ -30,7 +30,7 @@ int main(void)
 			printf("%d",l);
 		}
 		if( l != 100)
-			_putchar(" ");
+			_putchar(' ');
 	}
     return (0);
 }
