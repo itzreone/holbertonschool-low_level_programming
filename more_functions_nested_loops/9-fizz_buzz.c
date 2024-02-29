@@ -14,21 +14,13 @@ int main(void)
 		i = l % 3;
 		j = l % 5;	
 		if (i == 0 && j == 0)
-		{
-			printf("FizzBuzz");
-		}
+			printf("FizzBuzz ");
 		else if(i == 0 && j != 0)
-		{
-			printf("Fizz");
-		}
+			printf("Fizz ");
 		else if(i != 0 && j == 0)
-		{
-			printf("Buzz");
-		}
+			i != 100 ? printf("Buzz ") : printf("Buzz");
 		else
-		{
-			printf("%d",l);
-		}
+			printf("%d ", l);
 		if( l != 100)
 			_putchar(' ');
 	}
