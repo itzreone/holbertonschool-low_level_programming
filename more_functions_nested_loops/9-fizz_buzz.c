@@ -22,7 +22,6 @@ int main(void)
 		else
 			printf("%d ", l);
 		if( l != 100)
-			_putchar(' ');
 	}
     return (0);
 }
