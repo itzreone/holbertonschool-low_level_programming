@@ -1,25 +1,21 @@
 #include "main.h"
-#include <stdio.h>
 #include <string.h>
+
 /**
- * _strcat - Write a function that convert a string to an integer.
+ * _strcat - concatenates two strings
+ * @dest: checker
+ * @src: checker
  *
- * @dest: pointer
- * @src: pointer
  * Return: Always 0.
  */
 char *_strcat(char *dest, char *src)
 {
-	int i, j;
-	int ld = strlen(dest);
+	int size1 = strlen(dest), size2 = strlen(src), j;
 
-	j = ld;
-
-	for (i = 0; src[i] != '\0'; i++)
+	for (j = 0 ; j <= size2 ; j++)
 	{
-		dest[j] = src[i];
-		j++;
+		*(dest + size1 + j) = *(src + j);
 	}
-	dest[j] = '\0';
+
 	return (dest);
 }
