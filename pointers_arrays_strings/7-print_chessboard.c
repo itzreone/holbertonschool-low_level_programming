@@ -9,10 +9,10 @@
  */
 void print_chessboard(char (*a)[8])
 {
-for (int i = 0; i < 8; i++) {
-        for (int p = 0; p < 8; p++) {
-            putchar(a[i][p]);
-        }
-        putchar('\n'); // Add a newline after each row
-    }
+	for (int i = 0; i < 8; i++) {
+        	for (int p = 0; p < 8; p++) {
+            	_putchar(a[i][p]);
+        	}
+        	_putchar('\n'); // Add a newline after each row
+    	}
 }
