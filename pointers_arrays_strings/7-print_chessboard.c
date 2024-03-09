@@ -13,6 +13,6 @@ void print_chessboard(char (*a)[8])
         	for (int p = 0; p < 8; p++) {
             	_putchar(a[i][p]);
         	}
-        	_putchar('\n'); // Add a newline after each row
+        	printf('\n'); // Add a newline after each row
     	}
 }
