@@ -1,18 +1,20 @@
-#include "main.h"
-#include <stdio.h>
-
+#include<stdio.h>
+#include"main.h"
 /**
- * print_chessboard - check the code
- * @a: pointer
- *
- * Return: Always 0.
- */
+*print_chessboard - function show a chessboard
+*@a: variable pointer
+*/
 void print_chessboard(char (*a)[8])
 {
-	for (int i = 0; i < 8; i++) {
-        	for (int p = 0; p < 8; p++) {
-            	_putchar(a[i][p]);
-        	}
-        	printf('\n'); // Add a newline after each row
-    	}
+	int i;
+	int j;
+
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 8; j++)
+		{
+			_putchar(a[i][j]);
+		}
+		_putchar('\n');
+	}
 }
