@@ -1,26 +1,24 @@
 #include "main.h"
-#include <stdio.h>
 #include <string.h>
 
 /**
- * *_strchr - prints buffer in hexa
- * @s: var
- * @c: var
+ * _strchr -  locates a character in a string
+ * @s: checker
+ * @c: checker
  *
- * Return: Nothing.
+ * Return: nothing.
  */
 char *_strchr(char *s, char c)
 {
-	int i;
-	int l = strlen(s);
+	int i = 0, size = strlen(s);
 
-	for (i = 0; i <= l; i++)
+	for (; i <= size + 1 ; i++)
 	{
-		if (s[i] == c)
-		{
-			s += i;
-			return (s);
-		}
+		if (*(s + i) == c)
+			break;
 	}
-	return (NULL);
+	if (i == size + 2)
+		return (NULL);
+	else
+		return (s + i);
 }
