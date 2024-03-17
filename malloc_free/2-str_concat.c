@@ -1,24 +1,34 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+#include<stdio.h>
+#include"main.h"
+/**
+**_strncat - function print a concatenate
+*@dest: variable
+*@src: variable
+*@n: variable
+*Return: char
+*/
 
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
 	int size1 = 0, size2 = 0, i, k = 0, j = 0;
-    
+	
 	if (s1 != NULL)
+	{
 		while (s1[k] != '\0')
-        {	    
+        	{	    
 		    size1++;
 		    k++;
-        }
+        	}
+	}
 	if (s2 != NULL)
+	{
 		while (s2[j] != '\0')
-        {	
+        	{	
 		    size2++;
 		    j++;
-        }
+        	}
+	}
 	s = malloc(size1 + size2 + 1);
 	if (s == NULL)
 		return (NULL);
