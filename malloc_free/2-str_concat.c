@@ -1,33 +1,48 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <stdio.h>
+#include "main.h"
 /**
- * str_concat - concatenates two strings
- *
- * @s1: var
- * @s2: var
- *
- * Return: Always 0.
- */
+*str_concat - function concat two pointers
+*@s1: variable pointer char
+*@s2: variable pointer char
+*Return: pointer char
+*/
 char *str_concat(char *s1, char *s2)
 {
-	char *s;
-	int size1 = 0, size2 = 0, i;
+	int len = 0;
+	int len2 = 0;
+	int i, j;
+	char *cat = NULL;
 
-	if (s1 != NULL)
-		size1 = strlen(s1);
-	if (s2 != NULL)
-		size2 = strlen(s2);
-	s = malloc(size1 + size2 + 1);
-	if (s == NULL)
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+	len = strlen(s1);
+	len2 = strlen(s2);
+	cat = malloc(sizeof(char) * (len + len2) + 1);
+	if (cat == NULL)
+	{
 		return (NULL);
-	for (i = 0 ; i < size1 ; i++)
-		s[i] = s1[i];
-	for (i = 0 ; i < size2 ; i++)
-		s[size1 + i] = s2[i];
-	s[size1 + size2] = '\0';
-
-	return (s);
+	}
+	i = 0;
+	while (i < len)
+	{
+		cat[i] = s1[i];
+		i++;
+	}
+	j = 0;
+	while (j < len2)
+	{
+		cat[i] = s2[j];
+		i++;
+		j++;
+	}
+	cat[i] = '\0';
+	return (cat);
 }
