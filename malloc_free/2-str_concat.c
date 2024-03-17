@@ -8,13 +8,13 @@ char *str_concat(char *s1, char *s2)
 	int size1 = 0, size2 = 0, i, k = 0, j = 0;
     
 	if (s1 != NULL)
-		while (s1[i] != '\0')
+		while (s1[k] != '\0')
         {	    
 		    size1++;
 		    k++;
         }
 	if (s2 != NULL)
-		while (s2[i] != '\0')
+		while (s2[j] != '\0')
         {	
 		    size2++;
 		    j++;
