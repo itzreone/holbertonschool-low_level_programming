@@ -1,1 +1,1 @@
-struct
+reone in da game
