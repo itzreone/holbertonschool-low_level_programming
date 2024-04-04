@@ -1,2 +1,0 @@
-apt-get install sudo
-sudo sh -c 'echo "set mouse=a" >> /etc/vim/vimrc'
