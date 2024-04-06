@@ -1,25 +1,19 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * list_len -  returns the number of elements
- * @h: var
- *
- * Return: Always 0.
+ * list_len - function print the len
+ * @h: variable struct
+ * Return: size_t
  */
+
 size_t list_len(const list_t *h)
 {
-	size_t size = 0;
-	const list_t *head = h;
+	size_t count = 0;
 
-	if (!h)
-		return (size);
-	while (head->next)
+	while (h)
 	{
-		size++;
-		head = head->next;
+		h = h->next;
+		count++;
 	}
-	return (size + 1);
+	return (count);
 }

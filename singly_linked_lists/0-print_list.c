@@ -1,33 +1,24 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * print_list -  prints all the elements of a list_t list
- * @h: var
- *
- * Return: Always 0.
+ * print_list - function print linkedlist
+ * @h: variable struct
+ * Return: size_t
  */
+
 size_t print_list(const list_t *h)
 {
-	size_t size = 0;
-	const list_t *head = h;
+	size_t count = 0;
 
-	if (!h)
-		return (size);
-	while (head->next)
+	while (h)
 	{
-		if (head->str)
-			printf("[%lu] %s\n", strlen(head->str), head->str);
-		else
+		if (h->str == NULL)
 			printf("[0] (nil)\n");
-		size++;
-		head = head->next;
+		else
+			printf("[%d] %s\n", h->len, h->str);
+		h = h->next;
+		count++;
+
 	}
-	if (head->str)
-		printf("[%lu] %s\n", strlen(head->str), head->str);
-	else
-		printf("[0] (nil)\n");
-	return (size + 1);
+	return (count);
 }

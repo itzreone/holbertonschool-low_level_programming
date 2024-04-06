@@ -1,22 +1,16 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "lists.h"
 
 /**
-  * free_list - frees a list_t list
-  * @head: start of list
-  * Return: new list
-  */
+ * free_list - function
+ * @head: variable struct
+ * Return: void
+ */
+
 void free_list(list_t *head)
 {
-	list_t *ptr;
-
-	while (head)
-	{
-		ptr = head;
-		head = head->next;
-		free(ptr->str);
-		free(ptr);
-	}
+	while (head == NULL)
+		return;
+	free_list(head->next);
+	free(head->str);
+	free(head);
 }
