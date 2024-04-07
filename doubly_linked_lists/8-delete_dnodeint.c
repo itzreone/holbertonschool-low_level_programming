@@ -1,48 +1,47 @@
 #include "lists.h"
-
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * delete_dnodeint_at_index - function delete at end
- * @head: variable struct
- * @index: variable int
- * Return: int
-*/
+ * delete_dnodeint_at_index - deletes a new node
+ * @head: pointer to node
+ * @index: val
+ * Return: number of nodes
+ */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *delete = *head;
-	unsigned int count = 0;
+	unsigned int i = 0;
+	dlistint_t *ptr = *head;
 
-	if (!*head || !head)
+	if (!ptr)
 		return (-1);
-	if (index == 0)
+	if (ptr->next && index == 0)
 	{
-		if ((*head)->next)
-		{
-			*head = delete->next;
-			(*head)->prev = NULL;
-			free(delete);
-			return (1);
-		}
+		ptr->next->prev = NULL;
+		*head = ptr->next;
+		free(ptr);
+		return (1);
+	}
+	else if (index == 0)
+	{
 		free(*head);
-		*head = NULL;
 		return (1);
 	}
-	while (delete->next)
+	while (i != index)
 	{
-		if (count == index)
-		{
-			(delete->next)->prev = delete->prev;
-			(delete->prev)->next = delete->next;
-			free(delete);
-			return (1);
-		}
-		count++;
-		delete = delete->next;
+		if (!ptr)
+			return (-1);
+		ptr = ptr->next;
+		i++;
 	}
-	if (index == count)
+	if (ptr->next)
 	{
-		(delete->prev)->next = NULL;
-		free(delete);
+		ptr->prev->next = ptr->next;
+		ptr->next->prev = ptr->prev;
+		free(ptr);
 		return (1);
 	}
-	return (-1);
+	ptr->prev->next = NULL;
+	free(ptr);
+	return (1);
 }
