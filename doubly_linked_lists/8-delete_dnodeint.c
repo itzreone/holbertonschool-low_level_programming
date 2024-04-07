@@ -1,47 +1,41 @@
-#include "lists.h"
-#include <stddef.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include "lists.h"
 /**
- * delete_dnodeint_at_index - deletes a new node
- * @head: pointer to node
- * @index: val
- * Return: number of nodes
- */
+  * delete_dnodeint_at_index - add node at index
+  * @head: head node
+  * @index: index of value
+  * Return: if sucess 1 if not -1
+  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int i = 0;
-	dlistint_t *ptr = *head;
+	unsigned int a = 0;
+	dlistint_t *temp;
 
-	if (!ptr)
+	if (!*head)
 		return (-1);
-	if (ptr->next && index == 0)
+	temp = *head;
+	if (index == 0)
 	{
-		ptr->next->prev = NULL;
-		*head = ptr->next;
-		free(ptr);
+		if (temp->next)
+			temp->next->prev = temp->prev;
+		*head = temp->next;
+		free(temp);
 		return (1);
 	}
-	else if (index == 0)
+	while (temp)
 	{
-		free(*head);
-		return (1);
+		if (index == a)
+		{
+			if (temp->next)
+				temp->next->prev = temp->prev;
+			if (temp->prev)
+				temp->prev->next = temp->next;
+			free(temp);
+			return (1);
+		}
+		temp = temp->next;
+		a++;
 	}
-	while (i != index)
-	{
-		if (!ptr)
-			return (-1);
-		ptr = ptr->next;
-		i++;
-	}
-	if (ptr->next)
-	{
-		ptr->prev->next = ptr->next;
-		ptr->next->prev = ptr->prev;
-		free(ptr);
-		return (1);
-	}
-	ptr->prev->next = NULL;
-	free(ptr);
-	return (1);
+	return (-1);
 }
